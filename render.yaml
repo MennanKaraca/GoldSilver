@@ -1,0 +1,9 @@
+services:
+  - type: web
+    name: carsifiyat
+    runtime: node
+    plan: free
+    buildCommand: "npm install && npx -y playwright@1.64.1 install chromium"
+    startCommand: "npm start"
+    healthCheckPath: /api/spot
+    envVars: []
